@@ -14,6 +14,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   TextEditingController txtNama = TextEditingController();
+  TextEditingController txtPassword = TextEditingController();
   String nama = "Nama";
   @override
   Widget build(BuildContext context) {
@@ -33,6 +34,13 @@ class _MyAppState extends State<MyApp> {
                 ),
                 TextField(
                   controller: txtNama,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.person),
+                    label: Text('Nama'),
+                  ),
+                ),
+                TextField(
+                  controller: txtPassword,
                 ),
                 Text(nama),
                 SizedBox(
