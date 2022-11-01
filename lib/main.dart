@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person),
                     label: Text('Nama'),
+                    border: InputBorder(),
                   ),
                 ),
                 TextField(
