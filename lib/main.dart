@@ -32,16 +32,27 @@ class _MyAppState extends State<MyApp> {
                   'Data Input',
                   style: TextStyle(fontSize: 25),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 TextField(
                   controller: txtNama,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person),
                     label: Text('Nama'),
-                    border: InputBorder(),
+                    border: OutlineInputBorder(),
                   ),
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 TextField(
                   controller: txtPassword,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.key),
+                    label: Text('Password'),
+                    border: OutlineInputBorder(),
+                  ),
                 ),
                 Text(nama),
                 SizedBox(
@@ -61,6 +72,7 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () {
                           setState(() {
                             txtNama.text = "";
+                            txtPassword.text = "";
                             nama = "";
                           });
                         },
